@@ -1,0 +1,52 @@
+# Project: Assigment_GD2
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = chucnang1.o chucnang2.o ../baile/main.o chucnang3.o chucnang4.o chucnang5.o chucnang6.o chucnang7.o chucnang8.o
+LINKOBJ  = chucnang1.o chucnang2.o ../baile/main.o chucnang3.o chucnang4.o chucnang5.o chucnang6.o chucnang7.o chucnang8.o
+LIBS     = -L"D:/DevC/Dev-Cpp/TDM-GCC-64/lib" -L"D:/DevC/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/DevC/Dev-Cpp/TDM-GCC-64/include" -I"D:/DevC/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/DevC/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"D:/DevC/Dev-Cpp/TDM-GCC-64/include" -I"D:/DevC/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/DevC/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/DevC/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Assigment_GD2.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = D:\DevC\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+chucnang1.o: chucnang1.c
+	$(CC) -c chucnang1.c -o chucnang1.o $(CFLAGS)
+
+chucnang2.o: chucnang2.c
+	$(CC) -c chucnang2.c -o chucnang2.o $(CFLAGS)
+
+../baile/main.o: ../baile/main.c
+	$(CC) -c ../baile/main.c -o ../baile/main.o $(CFLAGS)
+
+chucnang3.o: chucnang3.c
+	$(CC) -c chucnang3.c -o chucnang3.o $(CFLAGS)
+
+chucnang4.o: chucnang4.c
+	$(CC) -c chucnang4.c -o chucnang4.o $(CFLAGS)
+
+chucnang5.o: chucnang5.c
+	$(CC) -c chucnang5.c -o chucnang5.o $(CFLAGS)
+
+chucnang6.o: chucnang6.c
+	$(CC) -c chucnang6.c -o chucnang6.o $(CFLAGS)
+
+chucnang7.o: chucnang7.c
+	$(CC) -c chucnang7.c -o chucnang7.o $(CFLAGS)
+
+chucnang8.o: chucnang8.c
+	$(CC) -c chucnang8.c -o chucnang8.o $(CFLAGS)

@@ -1,0 +1,11 @@
+void kiemtraso();
+void UC_BC();
+void karaoke();
+void tiendien();
+void doi_tien();
+void bank();
+void tragop();
+void ttsv();
+void sapxep();
+void timkiem();
+void Nhap();
