@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+</head>
+<body>
+    <script>
+        // 1.
+        let array_loai_SP = [
+            {idSp: "SP01", nameSP: "Laptop"},
+            {idSp: "SP02", nameSP: "Macbook"},
+            {idSp: "SP03", nameSP: "Watch"},
+        ];
+
+
+        // 2.
+        let array_chi_tiet_sp = [
+            {idProduct: "PR01", name: "Laptop Asus Tuf Gaming F15 i5 12000HX",
+            cost: "17.000", quantity: 20, idSp: "SP01"},
+            {idProduct: "PR02", name: "Macbook M3 Pro",
+            cost: "27.000", quantity: 6, idSp: "SP02"},
+            {idProduct: "PR03", name: "Watch Rolex Full Diamond",
+            cost: "97.000", quantity: 2, idSp: "SP03"},
+        ]
+
+        
+        // 3.
+        console.log(array_chi_tiet_sp);
+        // Xuất tên sản phẩm
+        array_chi_tiet_sp.forEach(item => {
+            console.log("Product name: " + item.name);
+        });
+
+        // 4.
+        console.log(array_chi_tiet_sp[2].quantity);
+
+        // 5.
+        // Thêm:
+        array_chi_tiet_sp[3] = {idProduct: "PR04", name: "Watch Rolex Full Gold",
+            cost: "57.000", quantity: 8, idSp: "SP03"};
+        console.log(array_chi_tiet_sp);
+        //Truy xuất:
+        console.log(array_chi_tiet_sp[3].cost);
+        
+    </script>
+</body>
+</html>

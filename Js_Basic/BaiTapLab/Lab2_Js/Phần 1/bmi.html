@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var w = prompt("Nhập cân nặng của bạn(kg): ");
+        var h = prompt("Nhập chiều cao của bạn(m): ");
+        
+        var bmi = w/(h*h);
+        bmi = Math.round(bmi*100)/100;        
+        document.write("Chỉ số BMI của bạn là: " + bmi + "<br>");
+
+        if(bmi < 18.5){
+            document.write("Bạn đang thiếu cân!");
+        }
+        else if( 18.5 < bmi && bmi < 23.99){
+            document.write("Bạn đang bình thường!");
+        }
+        else{
+            document.write("Bạn đang thừa cân!");
+        }
+        
+    </script>
+</body>
+</html>

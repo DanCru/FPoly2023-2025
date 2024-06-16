@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style></style>
+<body>
+    <video id="demo" width="700px" height="400px">
+        <source src="intro.mp4">
+        <img src="intro.mp4" alt="">
+    </video>
+
+    <div>
+        <button onclick="play_pause()">Play/Pause</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="replay()">Replay</button>
+        <button onclick="icrVolume()">Volume(+)</button>
+        <button onclick="dcrVolume()">Volume(-)</button>
+        <button onclick="silent()">Silent</button>
+    </div>
+    <script>
+        let player = document.getElementById("demo");
+
+        function play_pause() {
+            if(player.paused){
+                player.play();
+            }else{
+                player.pause();
+            }
+        }
+
+        function stop() {
+            if (!player.paused) {
+                player.pause();
+            }
+            player.currentTime = 0;
+        }
+
+        function replay() {
+            player.currentTime = 0;
+            player.play();
+        }
+
+        function icrVolume() {
+            player.volume += 0.1;
+        }
+
+        function dcrVolume() {
+            player.volume -= 0.1;
+        }
+
+        function silent() {
+            if(player.muted){
+                player.muted = false;
+            } else{
+                player.muted = true;
+            }
+            // player.volume = 0;
+        }
+
+        
+    </script>
+</body>
+</html>

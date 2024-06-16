@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .output {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: auto;
+            text-align: center;
+            position: relative;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+            cursor: pointer;
+        }
+        .message{
+            text-align: center;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="output"></div>
+    <div class="message"></div>
+    <script>
+        const output = document.querySelector(".output");
+        const message = document.querySelector(".message");
+
+        message.textContent = "Press to Start";
+        const game = {
+            timer: null,
+            start: null,
+        };
+
+        function ranNum(max){
+            return Math.floor(Math.random() * max);
+        }
+
+        function addBox() {
+            message.textContent = "Click it...";
+            game.start = new Date().getTime();
+            const box = document.createElement("div");
+            box.classList.add("box");
+            box.style.left = ranNum(450) + "px";
+            box.style.top = ranNum(450) + "px";
+            output.appendChild(box);
+            box.addEventListener("click", handleClick);
+        }
+
+        function handleClick() {
+            clearTimeout(game.timer);
+            const cur = new Date().getTime();
+            const dur = (cur - game.start) / 1000;
+            message.textContent = `It took ${dur} seconds to click`;
+            this.remove(); 
+            game.timer = setTimeout(addBox, ranNum(3000));
+        }
+
+        addBox();
+    </script>
+</body>
+</html>

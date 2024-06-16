@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            /* padding: 20px; */
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 95%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #0d7cab;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .loai{
+            width: 100px;
+        }
+
+        #type{
+            display: block;
+        }
+
+        #ship{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đặt hàng sản phẩm</h1>
+
+        <form onsubmit="return kiem_tra()">
+            <label for="san_pham">Sản phẩm:</label>
+            <select class="san_pham" name="san_pham">
+                <option value="SP1">Sản phẩm 1</option>
+                <option value="SP2">Sản phẩm 2</option>
+                <option value="SP3">Sản phẩm 3</option>
+            </select>
+
+            <label for="loai">Loại:</label>
+            <input type="number" class="loai" name="loai" min="1" value="1"> <br>
+            <label class="don_gia" for="phone">Đơn giá:</label>
+            <input type="text" id="gia" name="phone" required>
+
+            <label for="delivery" id="type">Loại giao hàng:</label>
+            <div>
+                <input type="radio" id="delivery" name="dia_chi" onclick="hien_thi(false)" value="inner" checked>
+                <label for="delivery">Nội thành</label>
+                <input type="radio" id="delivery2" name="dia_chi" onclick="hien_thi(true)" value="outer">
+                <label for="delivery2">Ngoại thành</label>
+                <label for="ship" id="ship">Phí vận chuyển</label>
+                <input id="ship2" type="text">
+            </div>
+
+            <button type="submit">Đặt mua</button>
+        </form>
+    </div>
+
+    <script>
+        function hien_thi(visible){  
+            var phi_vc = document.getElementById("ship");  
+            phi_vc.style.display = visible ? "block" : "none"; 
+        }  
+
+        function kiem_tra(){
+            var sp = document.querySelector(".san_pham");  
+            if(sp.value.length == 0){  
+                alert("Vui lòng chọn sản phẩm!");  
+                return false;  
+            }  
+
+            var gia = document.getElementById("gia");  
+            var ship = document.getElementById("ship2");  
+            if(isNaN(gia.value)){ 
+                alert("Vui lòng nhập số vào ô Đơn giá!");  
+                return false; 
+            } 
+            else if(parseFloat(gia.value) <= 0){  
+                alert("Đơn giá phải là số dương!");  
+                return false;  
+            }
+            else if(isNaN(ship.value)){ 
+                alert("Vui lòng nhập số vào ô Phí vận chuyển!");  
+                return false; 
+            } 
+            else if(parseFloat(ship.value) <= 0){  
+                alert("Phí vận chuyển phải là số dương!");  
+                return false;  
+            } 
+
+
+            var loai = document.querySelector(".loai");  
+            if(loai.value.length == 0){  
+                alert("Vui lòng nhập loại!");  
+                return false;  
+            }  
+
+            var radios = document.getElementsByName("dia_chi"); 
+            if(!radios[0].checked && !radios[1].checked){  
+                alert("Vui lòng chọn nơi nhận hàng!");  
+                return false;  
+            }
+            alert("Chúc mừng bạn đã đặt hàng thành công!"); 
+            return true;    
+        }
+    </script>
+    <!-- Sau gần 1h, em vẫn k thể giấu được cái input -->
+</body>
+</html>

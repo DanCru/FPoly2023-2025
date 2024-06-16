@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>Detail Sản phẩm</title>
+</head>
+<link rel="stylesheet" href="./CSS/content.css">
+<style>
+  button{
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .container_detail img:hover{
+    border: 0.1px solid #000;
+    cursor: pointer;
+  }
+  #main-img{
+    border: 1px solid #000;
+    width: 360px;
+    margin-bottom: 10px;
+  }
+
+  .ctsp{
+    position: absolute;
+    float: right;
+    width: 50%;
+    right: 200px;
+  }
+
+  .hhsp{
+    position: absolute;
+    float: left;
+    width: 50%;
+  }
+</style>
+<body>
+
+  <div class="container">
+
+    <div class="hhsp">
+        <div id="main-img">
+          <img src="./img_detail4/anh3.webp" alt="" width="358px" id="main">
+        </div>
+      
+        <div class="container_detail">
+          <img src="./img_detail4/anh1.webp" alt="Image 1" width="87px" onclick="changeImg('one')" id="one">
+          <img src="./img_detail4/anh2.webp" alt="Image 2" width="87px" onclick="changeImg('two')" id="two">
+          <img src="./img_detail4/anh3.webp" alt="Image 4" width="87px" onclick="changeImg('three')" id="three">
+          <img src="./img_detail4/anh4.webp" alt="Image 5" width="87px" onclick="changeImg('four')" id="four">
+          <button><a href="index.html">Quay lại</a></button>
+        </div>
+    </div>
+
+    <div class="ctsp">
+        <h1>Iphone 15 Blue ProoMax</h1>
+        
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, velit odit. Delectus aperiam, vero veniam ducimus fugiat ab quisquam accusantium doloremque repudiandae. Beatae aliquam blanditiis eius facere, assumenda impedit nisi.</p>
+    </div>
+  </div>
+  
+
+
+  <script>
+    function changeImg(id) {
+        let imgPath = document.getElementById(id).getAttribute('src');
+        document.getElementById('main').setAttribute('src', imgPath);
+    }
+  </script>
+</body>
+</html>

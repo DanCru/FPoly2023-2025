@@ -1,0 +1,19 @@
+.container{
+    margin: 0 auto;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid #000;
+
+}
+
+button{
+    width: 50px;
+    cursor: pointer;
+}
+
+#result{
+    border: 1px solid orangered;
+    width: 50%;
+    margin: 40px 110px;
+}

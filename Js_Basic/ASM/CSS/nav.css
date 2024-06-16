@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 60px;
+    background-color: #f1041f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+a, li{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav{
+    position: relative;
+    padding: 10px 5px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav img {
+    position: absolute;
+    width: 40px;
+    left: 130px;
+    top: 50%
+    
+}
+
+.logo {
+    width: 165px;
+    float: left;
+    line-height: 40px;
+}
+
+.nav a > span{
+    position: absolute;
+    color: #fff;
+    line-height: 40px;
+    font-size: x-large;
+    font-style: oblique;
+    font-weight: bold;
+    
+}
+
+.list{
+    position: absolute;
+    line-height: 40px;
+    left: 178px;
+    background-color: #ff5b6e;
+    border-radius: 12px;
+    padding: 0 5px;
+}
+
+.list a > p {
+    color: #fff;
+    /* left: 180px; */
+    font-size: small;
+    line-height: 40px;
+    
+}
+
+.h-nav{
+    display: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #a4a4a4;
+    margin:  0 -5px;
+    width: 200px;
+    border-radius: 8px;
+    top: 41px;
+    left: 3px;
+    position: absolute;
+
+}
+
+.h-nav li:hover{
+    display: block;
+    border-radius: 8px;
+   
+}
+
+.h-nav li a{
+    display: block;
+    padding-left: 5px;
+    color: rgb(139, 139, 139);
+}
+
+.h-nav li a:hover{
+    color: red;
+}
+
+.list:hover .h-nav{
+    display: block;
+}
+
+.adress {
+    position: absolute;
+    line-height: 40px;
+    left: 270px;
+    background-color: #ff5b6e;
+    border-radius: 12px;
+    padding: 0 5px;
+}
+
+.adress a > p{
+    color: #fff;
+}
+
+.search{
+    position: absolute;
+    line-height: 38px;
+    left: 380px;
+    border-radius: 12px;
+    width: 280px;
+}
+
+.search input{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    height: 39.5px;
+    padding: 0 0 0 35px;
+    width: 98%;
+    font-size: large;
+}
+
+.search i{
+    color: #ccc;
+    background-color: #fff;
+    padding: 8px;
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 5px;
+}
+
+.search button{
+    border: none;
+    outline: none;
+}
+
+.buy-product {
+    position: absolute;
+    width: 128px;
+    left: 665px;
+    line-height: 38px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.buy-product:hover{
+    background-color:#ff5b6e;
+}
+
+.buy-product a > i{
+    font-size: x-large;
+    color: #fff;
+    line-height: 38px;
+    /* position: absolute; */
+}
+
+.buy-product a .sub-buy{
+    left: 38px;
+    position: absolute;
+    /* line-height: 38px; */
+    bottom: 10px;
+    width: 120px;
+}
+
+.sub-buy > p{
+    margin-bottom: -18px;
+}
+
+.sub-buy p{
+    color: #fff;
+    font-size: small;
+}
+
+.truck-kun{
+    position: absolute;
+    width: 102px;
+    left: 795px;
+    line-height: 38px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.truck-kun:hover{
+    background-color: #ff5b6e;
+}
+
+.truck-kun a > i{
+    font-size: x-large;
+    color: #fff;
+    line-height: 38px;
+    
+}
+
+.truck-kun a > span{
+    color: #fff;
+    font-size: small;
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 15px;
+    bottom: 7.5px;
+    margin-left: 5px;
+}
+
+.cart-bag {
+    position: absolute;
+    width: 85px;
+    right: 215px;
+    line-height: 38px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.cart-bag:hover{
+    background-color: #ff5b6e;
+}
+
+.cart-bag a > i{
+    font-size: x-large;
+    color: #fff;
+    line-height: 38px;
+}
+
+.cart-bag a > span{
+    color: #fff;
+    font-size: small;
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 15px;
+    bottom: 7.5px;
+    margin-left: 5px;
+}
+
+.near-shop{
+    position: absolute;
+    width: 100px;
+    line-height: 38px;
+    right: 110px;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.near-shop:hover{
+    background-color: #ff5b6e;
+    cursor: pointer;
+}
+
+.near-shop a > i{
+    font-size: x-large;
+    color: #fff;
+    line-height: 38px;
+}
+
+.near-shop a > span{
+    color: #fff;
+    font-size: small;
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 15px;
+    bottom: 7.5px;
+    margin-left: 5px;
+}
+
+
+.login{
+    position: absolute;
+    line-height: 40px;
+    right: 0px;
+    background-color: #ff5b6e;
+    border-radius: 12px;
+    padding: 0 5px;
+}
+
+.login a > p{
+    color: #fff;
+}
+

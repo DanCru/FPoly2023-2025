@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: white;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        #dragme {
+            width: 80px;
+            height: 80px;
+            /* border: 1px solid black; */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)"> 1
+        <div id="dragme" draggable="true" ondragstart="dragStartHandler(event)">
+            Drag Me Pls!
+        </div>
+    </div>
+    <div class="box" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">2</div>
+
+    <script>
+        let draggedItem;
+
+        function dragStartHandler(event) {
+            draggedItem = event.target;
+        }
+
+        function dragOverHandler(event) {
+            event.preventDefault();
+        }
+
+        function dropHandler(event) {
+            event.preventDefault();
+            if (event.target.className === "box") {
+                event.target.appendChild(draggedItem);
+            }
+        }
+    </script>
+</body>
+</html>

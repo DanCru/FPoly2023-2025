@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slideshow{
+        margin-top: 40px;
+    }
+</style>
+<script> // img rollover
+    var hoaover = new Image();
+    var hoaout = new Image();
+    function loadAnh() {
+        hoaout.src = "./img/cogai.png";
+        hoaover.src = "./img/doigiay.jpg";
+    }// Thực ra là chỗ này em không cần load ảnh nhưng mà em vẫn thêm vào cho đầy đủ
+
+
+    function onMouseOverEvent() {
+        document.img.src = "./img/doigiay.jpg";
+    }
+    function onMouseOutEvent() {
+        document.img.src = "./img/cogai.png";
+    }
+</script>
+
+<script> //slideshow
+    var arrImg = [
+        "cogai.png",
+        "bonghoa.jpg",
+        "doigiay.jpg",
+        "hinhkhoi.jpg",
+        "kimtuthap.webp"
+    ];
+    var idx = 0;
+   
+    function nextImg(){
+        idx++;
+        if(idx >= arrImg.length){
+            idx = 0;
+        }
+        document.querySelector("#imgSlide").src = `./img/${arrImg[idx]}`;
+    }
+
+    function preImg(){
+        if(idx <= 0){
+            idx = arrImg.length;
+        }
+        idx--;
+        document.querySelector("#imgSlide").src = `./img/${arrImg[idx]}`;
+    }
+
+    function firstImg(){
+        document.querySelector("#imgSlide").src = "./img/cogai.png";
+    }
+
+    function lastImg(){
+        document.querySelector("#imgSlide").src = "./img/kimtuthap.webp";
+    }
+</script>
+<body onload="loadAnh()">  
+    <img name="img" src="./img/cogai.png" alt=""
+    onmouseover="onMouseOverEvent();" onmouseout="onMouseOutEvent();" width="250px" height="200px">
+
+
+    <div class="slideshow" align = "center">
+        <img id="imgSlide" src="./img/cogai.png" alt="" width="380px" height="300px">
+        <div class="button" align = "center">
+            <button onclick="firstImg()">Fisrt</button>
+            <button onclick="preImg()">Prev</button>
+            <button onclick="nextImg()">Next</button>
+            <button onclick="lastImg()">Last</button>
+        </div>
+    </div>
+</body>
+</html>

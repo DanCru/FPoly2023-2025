@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const theList = ['Lauren', 'Kevin',true,35,null,undefined,['one', 'two']];
+        // Xoá phần tử đầu tiên
+        theList.shift();
+        // Xoá phần tử cuối 
+        theList.pop();
+        // Thêm phần tử FIRST vào đầu mảng
+        theList.unshift('Fisrt');
+        // Thêm 'hello world' vào vị trí thứ 4
+        theList.splice(3,0,'hello world');
+        // Thêm 'middle' vào vị trí thứ 3 
+        theList.splice(2,0,'middle');
+        // Thêm LAST vào cuối 
+        theList.push("Last");
+        // Xuất kết quả
+        console.log(theList);
+
+
+        
+        
+    </script>
+</body>
+</html>

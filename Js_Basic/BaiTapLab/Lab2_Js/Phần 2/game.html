@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 10 + Math.round(5 * Math.random());
+        var a = prompt('Mời nhập số bất kỳ:');
+
+        if(a == x){
+           alert("Chúc mừng bạn đã đoán đúng!");
+        }
+        else if (a > x){
+            alert("Số của bạn lớn hơn số bí mật");
+        }
+        else{
+            alert("Số của bạn nhỏ hơn số bí mật")
+        }
+
+        alert("Số bí mật là số: " + x);
+    </script>
+</body>
+</html>

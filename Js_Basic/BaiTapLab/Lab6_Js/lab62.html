@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+        height: 100px;
+        width: 100px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <table align="center">
+    <tr>
+      <td><button></button></td>
+      <td><button></button></td>
+      <td><button></button></td>
+    </tr>
+    <tr>
+      <td><button></button></td>
+      <td><button></button></td>
+      <td><button></button></td>
+    </tr>
+    <tr>
+      <td><button></button></td>
+      <td><button></button></td>
+      <td><button></button></td>
+    </tr>
+  </table>
+  <script>
+    var flag = true;
+    var count = 0; 
+
+    function mark(index) {
+        var button = event.target;
+
+        var row = button.parentNode.rowIndex;
+        var col = button.parentNode.cellIndex;
+
+        var index = row * 3 + col;
+
+        button.innerText = flag ? "X" : "O";
+        button.style.backgroundColor = flag ? "aqua" : "yellow";
+
+        button.setAttribute("disabled", "true");
+
+        flag = !flag;
+
+        count++;
+
+        if (count == 8) {
+            alert("Game over!");
+            location.reload();
+        }
+    }
+
+    var buttons = document.getElementsByTagName("button");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", mark);
+    }
+  </script>
+</body>
+</html>

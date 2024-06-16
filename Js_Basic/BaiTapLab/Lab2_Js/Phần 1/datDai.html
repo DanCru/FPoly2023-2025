@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Nhập số mét vuông: ");
+        x = parseInt(x);
+
+       var sao = x/360;
+       var mau = x/3600;
+       var ha = x/3600;
+       
+       ha = Math.round(ha*100)/100;
+       mau = Math.round(mau*100)/100;
+       sao = Math.round(sao*100)/100;
+
+       document.write("Bạn vừa nhập " + x + " mét vuông" + "<br>");
+       document.write("Chuyển đổi sang sào: " + sao + " sào" + "<br>");
+       document.write("Chuyển đổi sang mẫu: " + mau + " mẫu" + "<br>");
+       document.write("Chuyển đổi sang hecta: " + ha + " hecta" + "<br>");
+    </script>
+</body>
+</html>

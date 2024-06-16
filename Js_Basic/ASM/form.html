@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form mua hàng</title>
+    <style>
+        .container{
+            margin: 30px auto;
+            text-align: center;
+            width: 1200px;
+            max-width: 100%;
+            position: relative;
+        }
+
+        .form_mua_hang{
+            text-align: left;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 580px;
+            height: 430px;
+            box-shadow: 1px 1px 5px gray;
+            padding: 10px;
+        }
+        label, input, select{
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        input{
+            border: 1px solid #000;
+        }
+
+        input[type="text"]{
+            padding: 5px;
+            width: 60%;
+        }
+
+        input[type="submit"]{
+            padding: 10px;
+            width: 20%;
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+
+        h1{
+            color: red;
+            text-transform: uppercase;
+        }
+
+        #khach_hang{
+            width: 255px;
+        }
+
+        #don_gia{
+            width: 292px;
+        }
+        #so_luong{
+            width: 285px;
+        }
+        #phi_van_chuyen{
+            width: 230px;
+        }
+        #thanh_tien{
+            width: 270px;
+        }
+
+        button{
+            padding: 8px;
+            background-color: red;
+            font-weight: bold;
+            
+        }
+
+        button a{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form mua hàng</h1>
+        <form action="" onsubmit="return checkForm()" class="form_mua_hang">
+            <label for="">Khách hàng </label>
+            <input type="text" name="khach_hang" id="khach_hang" onchange="checkForm()"> 
+            <span id="alert_khach_hang"></span>
+            <br>
+            
+            
+            <div>
+                <label for="">Loại hàng</label>
+                <select name="" id="loai_hang" onchange="chonLoaiHang()">
+                    <option value="">Chọn loại</option>
+                    <option value="1">Xách tay</option>
+                    <option value="2">Nội địa</option>
+                    <option value="3">VND</option>
+                </select> <span id="alert_loai_hang"></span>
+            </div> 
+            <label for="">Đơn giá</label>
+            <input type="text" name="" id="don_gia" > <br>
+            <label for="">Số lượng</label>
+            <input type="number" name="" id="so_luong" value="">
+            <span id="alert_so_luong"></span>
+            <br>
+            
+            <label for="">Nơi nhận hàng</label>
+            <input type="radio" name="noi_nhan_hang" id="noithanh" onchange="chonNoiNhanHang()">
+            <label for="noithanh">Nội thành</label>
+            <input type="radio" name="noi_nhan_hang" id="ngoaithanh" onchange="chonNoiNhanHang()">
+            <label for="ngoaithanh">Ngoại thành</label>
+            <span id="alert_noi_nhan_hang"></span>
+            <br>
+            <label for="">Phí vận chuyển</label>
+            <input type="text" id="phi_van_chuyen"> <br>
+            <label for="">Thành tiền</label>
+            <input type="text" name="" id="thanh_tien"> <br>
+            <input type="submit" value="Đặt mua" >
+            <button><a href="index.html">Quay lại</a></button>
+        </form>
+    </div>
+
+    <script src="./JS/form.js">
+        
+
+    </script>
+</body>
+</html>

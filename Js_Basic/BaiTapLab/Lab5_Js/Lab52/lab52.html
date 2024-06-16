@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Danh mục sản phẩm</h1>
+        <table border="1" id="dSMH">
+            <tr>
+                <td>Iphone 15</td>
+                <td>$1000</td>
+                <td><button onclick="them(this)">Thêm</button></td>
+            </tr>
+            <tr>
+                <td>Iphone 16</td>
+                <td>$2000</td>
+                <td><button onclick="them(this)">Thêm</button></td>
+            </tr>
+            <tr>
+                <td>SamSung J5</td>
+                <td>$100</td>
+                <td><button onclick="them(this)">Thêm</button></td>
+            </tr>
+            <tr>
+                <td>SamSung Note 3</td>
+                <td>$200</td>
+                <td><button onclick="them(this)">Thêm</button></td>
+            </tr>
+            
+        </table>
+        <hr>
+        <h1>Giỏ hàng</h1>
+        <table border="1" id="cart">
+            <tr>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Xóa</th>
+            </tr>
+        </table>
+        <p>Tổng tiền: <span id="tong"></span></p>
+    </div>
+    <script src="lab52.js"></script>
+</body>
+</html>

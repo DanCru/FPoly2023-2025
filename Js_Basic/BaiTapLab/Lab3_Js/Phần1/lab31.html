@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Nhập số a:"));
+        var b = parseInt(prompt("Nhập số b:")); 
+        var c = prompt("Nhập toán tử(+ - * /):");
+        
+        var cong = a + b;
+        var tru = a - b;
+        var nhan = a * b;
+        var chia = a / b;
+        
+
+        switch(c){
+            case '+':
+            alert("Tổng a và b: " + cong);
+            break;
+
+            case "-":
+            alert("Hiệu a và b: " + tru );
+            break;
+
+            case '*':
+            alert("Tích a và b: " + nhan );
+            break;
+
+            case '/':
+            alert("Thương a và b: " + chia );
+            break;
+
+            default:
+            alert("Bạn đã nhập sai toán tử"); 
+        }
+
+    </script>
+</body>
+</html>

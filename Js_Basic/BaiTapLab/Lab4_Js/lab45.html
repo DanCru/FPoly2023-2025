@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var TAOwindow;
+        function openW() {
+            TAOwindow = window.open("https://anhducnguyen299.000webhostapp.com/index.php", "YT", "width: 50px", "toolbar=yes, menubar=yes, noopener=true");
+        }
+
+
+        function closeW(){
+            if(TAOwindow){
+                TAOwindow.close(); // Ở chỗ này theo đúng logic là nó phải đóng cái giá trị mà nó lưu ở biến TAOwindow tức là cái 
+                // tab vừa mở nhưng hình như đang bị sai về cái port hay id gì đấy nên k chạy đc đúng k thầy
+                
+            }
+        };
+
+        function checkW() {
+            if(TAOwindow) {
+                if(window.closed) {
+                    alert("Đã đóng cửa sổ");
+                } else {
+                    alert("Cửa sổ đang mở");
+                }
+            }
+        };
+    </script>
+    <button type="submit" onclick="openW()">Mở cửa sổ</button>
+    <button onclick="closeW()">Đóng cửa sổ</button>
+    <button onclick="checkW()">Kiểm tra</button>
+</body>
+</html>

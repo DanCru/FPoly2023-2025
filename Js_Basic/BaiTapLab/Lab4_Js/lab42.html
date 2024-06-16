@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4</title>
+</head>
+<body>
+
+    <!-- Bài 2 -->
+    <script>
+        var objSVien = {};
+        objSVien.name = prompt("Nhập tên: ");
+        objSVien.point = prompt("Nhập điểm: ");
+        objSVien.hienThi = function(){
+            document.write("Tên sinh viên: " + this.name + "<br>") ;
+            document.write("Điểm sinh viên: " + this.point + "<br>");
+            let hocLuc = this.point;
+            if(hocLuc >= 5){
+                document.write("Học lực: Đậu!");
+            } else if(hocLuc < 5){
+                document.write("Học lực: Trượt!");
+            } else{
+                alert("Khác");
+            }
+            
+        }
+        
+    </script>
+    <button type="submit" onclick="objSVien.hienThi()">Check</button>
+
+</body>
+</html>
