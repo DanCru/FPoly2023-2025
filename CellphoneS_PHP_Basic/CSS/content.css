@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    /* height: 2000px; */
+    width: 1200px;
+    max-width: 100%;
+    /* background-color: #f0c3c3; */
+    margin: 70px auto;
+    border-radius: 10px;
+    margin-top: 105px;
+    
+
+}
+
+.headContent {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    
+}
+
+.leftHeadContent {
+    width: 220px;
+    height: 100%;
+    float: left;
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 0 5px #b72b2b;
+    box-shadow: 0 0 5px gray;
+}
+
+.mainHeadContent {
+    height: 80%;
+    float: left;
+    width: calc(100% - 500px);
+    margin: 0 10px;
+    position: absolute;
+    right: 260px;
+    box-shadow: 0 0 4px gray;
+    z-index: 2;
+
+}
+
+.mainHeadContent .coverMainImg > img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.sub-mainHeadContent{
+    height: 22%;
+    float: left;
+    width: calc(100% - 500px);
+    /* background-color: rgb(230, 158, 70); */
+    margin: 0 10px;
+    position: absolute;
+    bottom: 0;
+    right: 260px;
+    box-shadow: 0 0 4px rgb(161, 161, 161);
+    border-radius: 7px;
+}
+
+.inner-subMain{
+    width: calc(100% / 5);
+    float: left;
+    position: relative;
+    top: 25px;
+    padding: 5px;
+    text-align: center;
+}
+
+.inner-subMain:hover p{
+    border-bottom: 3px solid #2e2d2d;
+    font-size: 12px;
+    font-weight: bold;
+}
+.inner-subMain a > p{
+    font-size: 12px;
+    padding-bottom: 5px;
+    color: #454545;
+}
+
+.rightHeadContent {
+    width: 260px;
+    height: 100%;
+    float: right;
+    position: absolute;
+    right: 0;
+    border-radius: 12px;
+    /* box-shadow: 0 0 5px gray; */
+    
+}
+
+.innerRight{
+    position: relative;
+    height: calc(100% / 3);
+    /* margin: -5px 0; */
+   margin-bottom: 4px;
+    
+}
+
+.innerRight img{
+    position: absolute;
+    width: 100%;
+    float: left;
+    height: 94%;
+    /* padding: 5px 0; */
+    border-radius: 10px;
+    box-shadow: 0 0 4px gray;
+}
+
+
+
+.fa-angle-left, .fa-angle-right{
+    position: absolute;
+}
+
+.coverMainImg > i:hover{
+    background-color: rgb(210, 210, 210);
+    border-radius: 20px;
+    cursor: pointer;
+    /* height: 40px; */
+}
+
+.fa-angle-left{
+    top: 130px;
+    font-size: xx-large;
+    left: 5px;
+}
+
+.fa-angle-right{
+    top: 130px;
+    font-size: xx-large;
+    right: 5px;
+}
+
+.v-nav{
+    position: relative;
+    height: 100%;
+}
+
+.v-nav  li {
+    /* height: calc(100% / 12); */
+    padding: 6.7px 15px;
+}
+
+.v-nav li:hover{
+    background-color: #ebebeb;
+    cursor: pointer;
+    
+}
+
+.v-nav li:last-child:hover{
+    border-radius: 0 0 10px 10px;
+}
+
+.v-nav li:first-child:hover{
+    border-radius: 10px 10px 0 0;
+}
+
+.v-nav li  a{
+  color: #2e2d2d;
+}
+.v-nav .fa-chevron-right{
+    position: absolute;
+    right: 10px;
+}
+
+.container > h1{
+    color: red;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.mainContent {
+    width: 100%;
+    /* background-color: #d4d3d3; */
+    /* height: 1000px; */
+    /* margin: 0 -20px; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.innerMainContent {
+    float: left;
+    width: 18%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.coverMainContent {
+    box-shadow: 0 0 3px #676767;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    /* position: absolute; */
+}
+
+.coverMainContent .addCart{  
+    /* top: 70px; */
+    width: 195px;
+    background-color: #fff;
+    z-index: 2;
+    display: none;
+    padding: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    border: 1px solid #9b9b9b;
+}
+
+
+.coverMainContent:hover .addCart{
+    display: block;
+    margin-top: -29px;
+    
+}
+
+.addCart:hover {
+    background-color: rgb(255, 85, 85); 
+}
+
+
+.addCart:hover a{
+    color: #fff;
+}
+
+.addCart a{
+    display: block;
+    color: #ff0000;
+
+}
+
+.coverMainContent img{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+
+
+.coverMainContent .nameProduct{
+    color: #3f3939;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.coverMainContent >p{
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+}
+.coverMainContent p span{
+    color: #4e4e4e;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.logout{
+    width: 200px;
+}
+
+.nameUser{
+    color: #fff;
+}
+
+.san_pham, .san_pham td, .san_pham th{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.san_pham{
+    width: 100%;
+}
+
