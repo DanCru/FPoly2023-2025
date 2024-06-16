@@ -1,0 +1,6 @@
+Bài của em sẽ làm hơi khác 1 chút cho với đề bài, bài của em chỉ cho phép admin CRUD tài khoản, user thì không, kể cả đã đăng nhập
+
+Do là theo lối admin mới có quyền truy cập tất cả nên là chỉ có admin mới được thao tác với database.
+
+Tài khoản admin: admin - 12345
+// lần này thì em đỡ mông lung hơn trước rồi.
